@@ -3,21 +3,21 @@
         io.github.kotoba-lang/text
         {:git/url "https://github.com/kotoba-lang/text.git"
          :git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
-        io.github.kotoba-lang/fs-ifilesystem
-        {:git/url "https://github.com/kotoba-lang/fs-ifilesystem.git"
-         :git/sha "86c46518b60ff14af1001c4a2ced210608fb40c7"}
+        io.github.kotoba-lang/fs-filesystem
+        {:git/url "https://github.com/kotoba-lang/fs-filesystem.git"
+         :git/sha "118225c40d5f9f21ed517773c4faff1dc9a012e2"}
         io.github.kotoba-lang/fs-sep
         {:git/url "https://github.com/kotoba-lang/fs-sep.git"
-         :git/sha "b33af25990c5b5d423dce7f647576cead7993002"}
+         :git/sha "3fec91a22dd07fc07e941dd342ac809e2abad0db"}
         io.github.kotoba-lang/fs-split
         {:git/url "https://github.com/kotoba-lang/fs-split.git"
-         :git/sha "24f2b92005aa216b45ea4f3bcf11ec2e7be60c1c"}
+         :git/sha "2bf33c8e48d3316ca345a1cf59347f7b35f9882c"}
         io.github.kotoba-lang/fs-utf8-bytes
         {:git/url "https://github.com/kotoba-lang/fs-utf8-bytes.git"
-         :git/sha "56e889d2c93babd1837fd384d7c5d5e4dea83329"}
+         :git/sha "5f2e24f1118bb66f1007d33015a89e25462e255a"}
         io.github.kotoba-lang/fs-utf8-text
         {:git/url "https://github.com/kotoba-lang/fs-utf8-text.git"
-         :git/sha "6e5513eebd436ce8286676f3dad73830349be3de"}}
+         :git/sha "6c0a0c1a441c1279ce73743a52c03f584288f1ae"}}
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner

@@ -6,19 +6,21 @@
   definitions it reaches -- nothing else.
 "
   (:require [kotoba.lang.text :as str]
-            [kotoba.fs.ifilesystem :refer [IFilesystem delete exists? list read read-bytes write write-bytes]]
+            [kotoba.fs.filesystem :refer [Filesystem delete exists? list read read-bytes write write-bytes]]
             [kotoba.fs.sep :refer [sep]]
             [kotoba.fs.split :refer [split]]
             [kotoba.fs.utf8-bytes :refer [utf8-bytes]]
-            [kotoba.fs.utf8-text :refer [utf8-text]]))
+            [kotoba.fs.utf8-text :refer [utf8-text]])
+  #?(:clj  (:require [kotoba.lang.text :as str])
+     :cljs (:require [kotoba.lang.text :as str])))
 
 (defn mem-filesystem
-  "An atom-backed IFilesystem. Paths map to either a string (file content) or
+  "An atom-backed Filesystem. Paths map to either a string (file content) or
   a nil placeholder (directory). Useful for tests and OSS-standalone apps; the
   host injects a real one in production."
   []
   (let [store (atom {})]
-    (reify IFilesystem
+    (reify Filesystem
       ;; A stored value is a string (written as text), a vector of unsigned
       ;; bytes (written as bytes), or nil (a directory placeholder). read and
       ;; read-bytes each convert whichever one is there, so the two faces
